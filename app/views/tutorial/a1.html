@@ -83,7 +83,7 @@
                         </p>
 
 
-                        <pre>while(1)</pre>
+                        <pre>Código seguro para evitar a vulnerabilidade</pre>
                         <p>
                             This input will cause the target server's event loop to use 100% of its processor time and unable to process any other incoming requests until process is restarted.
                         </p>
@@ -161,9 +161,9 @@
                             <code>parseInt()</code>instead.
                             <pre>
         //Fix for A1 -1 SSJS Injection attacks - uses alternate method to eval
-        var preTax = parseInt(req.body.preTax);
-        var afterTax = parseInt(req.body.afterTax);
-        var roth = parseInt(req.body.roth);
+        var preTax = parseInt(req.body.preTax, 10) || 0;
+        var afterTax = parseInt(req.body.afterTax, 10) || 0;
+        var roth = parseInt(req.body.roth, 10) || 0;
                             </pre>
                         </p>
                         <p>In addition, all functions begin with
